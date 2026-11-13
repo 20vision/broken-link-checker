@@ -1,0 +1,9 @@
+{
+  "name": "broken-link-checker",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "broken-link-checker Apify actor",
+  "dependencies": { "apify": "^3.5.0", "crawlee": "^3.13.0", "cheerio": "^1.0.0" },
+  "scripts": { "start": "node src/main.js" },
+  "license": "MIT"
+}

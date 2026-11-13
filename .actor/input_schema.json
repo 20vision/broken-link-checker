@@ -1,0 +1,10 @@
+{
+  "title": "Broken Link Checker input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrl": { "title": "Start address", "type": "string", "description": "The page to start from, for example https://www.example.com. Only pages on the same site are crawled.", "editor": "textfield", "prefill": "https://www.myclawn.com" },
+    "maxPages": { "title": "Page limit", "type": "integer", "description": "How many pages of the site to crawl (1 to 500).", "default": 50, "minimum": 1, "maximum": 500, "prefill": 30 }
+  },
+  "required": ["startUrl"]
+}

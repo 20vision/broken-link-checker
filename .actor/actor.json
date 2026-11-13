@@ -1,0 +1,53 @@
+{
+  "actorSpecification": 1,
+  "name": "broken-link-checker",
+  "title": "Broken Link Checker: Find 404s and Dead Images on a Site",
+  "version": "0.0",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "broken": {
+          "title": "Broken links and images",
+          "transformation": {
+            "fields": [
+              "page",
+              "link",
+              "kind",
+              "status",
+              "error",
+              "linkText"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "page": {
+                "label": "Found on page"
+              },
+              "link": {
+                "label": "Broken address"
+              },
+              "kind": {
+                "label": "Type"
+              },
+              "status": {
+                "label": "Status"
+              },
+              "error": {
+                "label": "Error"
+              },
+              "linkText": {
+                "label": "Link text"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dockerfile": "./Dockerfile",
+  "output": "./output_schema.json"
+}
